@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>百洋健康_全球专业营养健康平台</title>
+    <link rel="stylesheet" href="../css/base.css">
+    <link rel="stylesheet" href="../css/banner.css">
+    <link rel="stylesheet" href="../css/index.css">
+    <link rel="stylesheet" href="../css/swiper.min.css">
+    <link rel="stylesheet" href="../css/home_header.css">
+    <link rel="stylesheet" href="../css/home_index_main.css">
+    <link rel="stylesheet" href="../css/II.banner.css">
+    <script src="../lib/jquery-3.4.1.js"></script>
+    <script src="../lib/II.Carousel.js"></script>
+    <script src="../lib/III.Banner.js"></script>
+    <script src="../lib/IV.Floor.js"></script>
+</head>
+
+<body>
+    <header id="header"></header>
+    <main>
+        <div id="ncToolbar" class="nc-appbar"></div>
+        <div class="box1"></div>
+        <div class="home_main_pc"></div>
+    </main>
+    <footer id="footer"></footer>
+    <script>
+        $(() => {
+            $("#ncToolbar").load("./shoppingCart.html");
+            $("#header").load("./header.html");
+            $("#footer").load("./footer.html");
+            $.getJSON("../../../server/carousel.json", (data) => new Carousel(data).init());
+            $.getJSON("../../../server/carousel.json", (data) => new Banner(data).init());
+            $.getJSON("../../../server/carousel.json", (data) => new Floor(data).init());
+        })
+    </script>
+</body>
+
+</html>

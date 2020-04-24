@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <!-- <script>
+        var data = new Array();
+        var o = document.querySelectorAll(".home_gg_pc_ul li");
+        for (var i = 0, len = o.length; i < len; i++) {
+            var ele = o[i];
+            var w = ele.querySelector("img").src;
+            var h = ele.querySelector("a").href;
+            var s = {};
+            s.src = w;
+            s.href = h;
+            data.push(s)
+        }
+        JSON.stringify(data);
+    </script>
+    <script>
+        var data = new Array();
+        var o = document.querySelector(".swiper-wrapper.home_hotbd").children;
+        for (var i = 0, len = o.length; i < len; i++) {
+            var ele = o[i];
+            var w = ele.querySelector("img").src;
+            var h = ele.querySelector("a").href;
+            var g = ele.querySelectorAll("a")[2].innerText;
+            var p = ele.querySelector("p").innerText;
+            var span = ele.querySelector("span").innerText;
+            var s = {};
+            s.src = w;
+            s.href = h;
+            s.shop = g;
+            s.title = p;
+            s.price = span;
+            data.push(s)
+        }
+        JSON.stringify(data);
+    </script> -->
+    <!-- <script>
+        var data = new Array();
+        var arr = new Array();
+        var sum = new Array();
+        var o = document.querySelector(".home_yy_pc").children;
+        // for (var i = 0, len = o.length; i < len; i++) {
+            var ele = o[0];
+            var h3 = ele.querySelector("h3").innerText;
+            var cru = ele.querySelector(".home_pc_crumbs").children;
+            for (var k = 0, len = cru.length - 1; k < len; k++) {
+                var a1 = cru[k].innerText;
+                var a2 = cru[k].href;
+                var aText = {};
+                aText.title = a1;
+                aText.href = a2;
+                sum.push(aText);
+            }
+            var see = ele.querySelector(".home_look_more").innerText;
+            var imgB = ele.querySelector(".home_yy_img");
+            var href = imgB.querySelector("a").href;
+            var imgI = imgB.querySelector("img").src;
+            var ul = ele.querySelector(".home_yy_goodslist");
+            var oLi = ul.querySelectorAll("li");
+            for (var x = 0, len = oLi.length; x < len; x++) {
+                var oLiH = oLi[x];
+                var href = oLiH.querySelector("a").href;
+                var imgII = oLiH.querySelector("img").src;
+                var bText = {};
+                bText.href = href;
+                bText.src = imgII;
+                arr.push(bText);
+            }
+            var dX = {};
+            dX.h3 = h3;
+            dX.crumbs = sum;
+            dX.see = see;
+            dX.href = href;
+            dX.src = imgI;
+            dX.goodslist = arr;
+            data.push(dX);
+        // }
+        JSON.stringify(data);
+    </script>
+    <script>
+        var data = new Array();
+        var arr = new Array();
+        var sum = new Array();
+        var o = document.querySelector(".swiper-wrapper.home_recommend_slide").children;
+        for (var i = 0, len = o.length; i < len; i++) {
+            var ele = o[i];
+            var div1 = ele.querySelector(".swiper-slide-img");
+            var hrefA=div1.querySelector("a").href;
+            var srcA=div1.querySelector("img").src;
+            var div2 = ele.querySelector(".swiper-slide-des");
+            var title=div2.querySelector("a").innerText;
+            var Rmb=div2.querySelector("em").innerText;
+            var price=div2.querySelector("span").innerText;
+            var Org=div2.querySelector("i").innerText;
+            
+            var dX = {};
+            dX.href = hrefA;
+            dX.src = srcA;
+            dX.title = title;
+            dX.Rmb = Rmb;
+            dX.price = price;
+            dX.Org = Org;
+            data.push(dX);
+        // }
+        JSON.stringify(data);
+    </script> -->
+    <script>
+        var data = new Array();
+        var arr = new Array();
+        var o = document.querySelectorAll(".item");
+        for (var i = 0, len = o.length - 1; i < len; i++) {
+            var ele = o[i];
+            var div1 = ele.querySelector(".goods-pic");
+            var srcA = div1.querySelector("img").src;
+            var div2 = ele.querySelector(".goods-pic-scroll-show ul").children;
+            // for(var j=0,len=div2.length;j<len;j++){
+            var e = div2[1];
+            var src_2 = e.querySelector("img").src;
+            //     arr.push(src);
+            // }
+            var div3 = ele.querySelector(".goods-name");
+            var title_1 = div3.querySelector("a").innerHTML.split("<")[0];
+            var title_2 = div3.querySelector("a").title;
+            var div4 = ele.querySelector(".goods-price");
+            var price_1 = div4.querySelector(".sale-price").innerText.slice(1);
+            var price_2 = div4.querySelector(".market-price").innerText.slice(1);
+
+            var dX = {};
+            dX.src_1 = srcA;
+            dX.src_2 = src_2;
+            dX.title_1 = title_1;
+            dX.title_2 = title_2;
+            dX.price_1 = price_1;
+            dX.price_2 = price_2;
+            data.push(dX);
+        }
+        JSON.stringify(data);
+    </script>
+    <script>
+        var o = document.querySelectorAll(".item")[0];
+        var div2 = o.querySelector(".goods-pic-scroll-show ul").children;
+        for (var j = 0, len = div2.length; j < len; j++) {
+            var e = div2[j];
+            var src = e.querySelector("img").src;
+            arr.push(src);
+        }
+        JSON.stringify(arr);
+    </script>
+    <script>
+        var o = document.querySelector(".menu").children;
+        var ele = o[0];
+        var subA = ele.querySelector(".sub-class-content");
+        var subB = subA.querySelectorAll("dl");
+        var subC = subB[0];
+
+
+
+
+        var data = new Array();
+        var arr = new Array();
+        var con = new Array();
+        var ele = document.querySelector(".menu");
+        var o = ele.querySelectorAll(".odd");
+        for (var i = 0, len = o.length; i < len; i++) {
+            var ele = o[i];
+            var h4 = ele.querySelector("h4").innerText ? ele.querySelector("h4").innerText : "";
+            if (h4 == null) {
+                continue;
+            } else {
+                var recA = ele.querySelector(".recommend-class").children;
+                for (var j = 0, len = recA.length; j < len; j++) {
+                    var e = recA[j];
+                    var rec = e.querySelector("a").innerText;
+                    arr.push(rec);
+                }
+                var subA = ele.querySelector(".sub-class-content");
+                var subB = subA.querySelectorAll("dl");
+                for (var k = 0, len = subB.length; k < len; k++) {
+                    var subC = subB[k];
+                    var h3 = subC.querySelector("h3").innerText;
+                    var subD = subC.querySelector(".goods-class");
+                    for (var x = 0, len = subD.length; x < len; x++) {
+                        var sub = subD[x].text;
+                    }
+                    var pX = {};
+                    pX.h3 = h3;
+                    pX.sub = sub;
+                    con.push(h3);
+                }
+
+                var dX = {};
+                dX.h4 = h4;
+                dX.rec = arr;
+                dX.con = con;
+                data.push(dX);
+            }
+        }
+        JSON.stringify(data);
+    </script>
+    {
+        "h4": "",
+        "rec": [],
+        "con": [{
+            "": [""],
+            "": ["", "", ""]
+        }]
+    }
+    
+ 
+</body>
+
+</html>

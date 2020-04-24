@@ -1,0 +1,97 @@
+.box {
+    width: 1250px;
+    margin: 50px auto;
+    position: relative;
+}
+
+.index-content {
+    position: relative;
+    left: 0px;
+    top: 0px;
+    height: 350px;
+    width: 1200px;
+    /* background: green; */
+}
+
+.index-slider {
+    position: absolute;
+    width: 1200px;
+    height: 340px;
+    overflow: hidden;
+    /* border: 1px solid #000; */
+}
+
+.index-slider-list {
+    position: relative;
+    top: 30px;
+    height: 340px;
+    width: 5434px;
+    /* display: flex; */
+}
+
+.index-slider-list .index-slider-list-item{
+    width: 232px;
+    margin-right: 15px;
+    height: 330px;
+    border-top: 1px solid orangered;
+    float: left;
+    text-align: center;
+    background: #fff;
+}
+
+.index-slider-list .index-slider-list-item img {
+    width: 160px;
+    height: 160px;
+    margin: 25px 40px;
+}
+
+.index-title {
+    margin: 0 20px 3px;
+    font-size: 14px;
+    font-weight: 400;
+    text-overflow: ellipsis;
+    color: #212121;
+    overflow: hidden;
+    white-space: nowrap;
+}
+
+.index-desc {
+    height: 18px;
+    margin: 0 20px 12px;
+    font-size: 12px;
+    text-overflow: ellipsis;
+    color: #b0b0b0;
+    overflow: hidden;
+    white-space: nowrap;
+}
+
+.index-price {
+    margin: 0;
+    color: #ff6709;
+}
+
+.index-price del {
+    color: #b0b0b0;
+}
+
+.index-swiper-controls {
+    position: relative;
+    right: 15px;
+}
+
+.index-swiper-controls span {
+    width: 33px;
+    height: 24px;
+    display: inline-block;
+    border: 1px solid #ccc;
+    text-align: center;
+    margin: 0px
+}
+
+span {
+    user-select: none;
+}
+
+span:hover {
+    color: orange
+}

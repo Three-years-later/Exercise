@@ -1,0 +1,334 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>美妆品牌</title>
+    <link rel="stylesheet" href="../css/base.css">
+    <link rel="stylesheet" href="../css/home_header.css">
+    <link rel="stylesheet" href="../css/layout.css">
+    <script src="../lib/jquery-3.4.1.js"></script>
+    <script src="../lib/Cookie.js"></script>
+    <script src="../lib/VII.Cart.js"></script>
+    <script src="../lib/VI.Details.js"></script>
+
+</head>
+
+<body>
+    <header id="header">
+        <div class="public-top-layout w">
+            <div class="topbar wrapper">
+                <div class="user-entry">
+                    您好，欢迎来到
+                    <a href="http://127.0.0.1/demo/client/src/html/home.html" target="_blank">百洋健康</a>
+                    <span>
+                        [
+                        <a href="http://127.0.0.1/demo/client/src/html/login.html" target="_blank">登录</a>
+                        ]
+                    </span>
+                    <span>
+                        [
+                        <a href="http://127.0.0.1/demo/client/src/html/registered.html" target="_blank">注册</a>
+                        ]
+                    </span>
+                </div>
+                <div class="quick-menu">
+                    <dl class>
+                        <dt>
+                            <a href="" target="_blank">我的订单</a>
+                            <i></i>
+                        </dt>
+                        <dd>
+                            <ul>
+                                <li><a href="" target="_blank">待付款订单</a></li>
+                                <li><a href="" target="_blank">待确认订单</a></li>
+                                <li><a href="" target="_blank">待评价交易</a></li>
+                            </ul>
+                        </dd>
+                    </dl>
+                    <dl class>
+                        <dt>
+                            <a href="" target="_blank">我的收藏</a>
+                            <i></i>
+                        </dt>
+                        <dd>
+                            <ul>
+                                <li><a href="" target="_blank">商品收藏</a></li>
+                                <li><a href="" target="_blank">店铺收藏</a></li>
+                            </ul>
+                        </dd>
+                    </dl>
+                    <dl class>
+                        <dt>
+                            <a href="" target="_blank">客户服务</a>
+                            <i></i>
+                        </dt>
+                        <dd>
+                            <ul>
+                                <li><a href="" target="_blank">帮助中心</a></li>
+                                <li><a href="" target="_blank">售后服务</a></li>
+                                <li><a href="" target="_blank">客服中心</a></li>
+                            </ul>
+                        </dd>
+                    </dl>
+                </div>
+            </div>
+        </div>
+        <div class="header-wrap">
+            <header class="public-head-layout wrapper">
+                <h1 class="site-logo">
+                    <a href="http://127.0.0.1/demo/client/src/html/home.html">
+                        <img src="../img/logo.png" class="pngFix">
+                    </a>
+                </h1>
+                <div class="head-search-layout">
+                    <div class="head-search-bar" id="head-search-bar">
+                        <form action="http://127.0.0.1/demo/client/src/html/home.html" method="get" class="search"
+                            id="top_search_form">
+                            <input name="act" id="search_act" value="search" type="hidden">
+                            <input name="op" id="search_op" value="index" type="hidden">
+                            <div id="searchTxt" class="searchTxt" onmouseout="this.className='searchTxt';"
+                                onmouseover="this.className='searchTxt searchTxtHover';">
+                                <div class="searchMenu">
+                                    <div id="searchSelected" class="searchSelected">商品</div>
+                                    <i id="i1" class="down block"></i>
+                                    <div id="searchTab" class="searchTab" style="display: none;">
+                                        <ul>
+                                            <li id="search_goods" class="">商品</li>
+                                            <li id="search_store" class="">店铺</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <input id="keyword" class="ui-autocomplete-input" placeholder="请输入您要搜索的商品关键字" value=""
+                                    name="keyword" autocomplete="off" role="textbox" aria-autocomplete="list"
+                                    aria-haspopup="true" type="text">
+                            </div>
+                            <div class="searchBtn">
+                                <button id="searchBtn" type="submit">搜索</button>
+                            </div>
+                        </form>
+                        <div class="search-tip" id="search-tip">
+                            <div class="search-history">
+                                <div class="title">历史记录<a href="javascript:void(0);" id="search-his-del">清除</a></div>
+                                <ul id="search-his-list">
+                                </ul>
+                            </div>
+                            <div class="search-hot">
+                                <div class="title">热门搜索...</div>
+                                <ul>
+                                    <li><a href="" target="_blank">日本药妆神器</a></li>
+                                    <li><a href="" target="_blank">承善堂阿胶</a></li>
+                                    <li><a href="" target="_blank">儿童长高推荐</a></li>
+                                    <li><a href="" target="_blank">调节血脂</a></li>
+                                    <li><a href="" target="_blank">蛋白粉</a></li>
+                                    <li><a href="" target="_blank">补钙爆品</a></li>
+                                    <li><a href="" target="_blank">眼部逆龄黑科技</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="keyword">
+                        <ul>
+                            <li><a href="" target="_blank">迪巧</a></li>
+                            <li><a href="" target="_blank">蛋白粉</a></li>
+                            <li><a href="" target="_blank">眼贴</a></li>
+                            <li><a href="" target="_blank">玻尿酸</a></li>
+                            <li><a href="" target="_blank">橄榄油</a></li>
+                            <li><a href="" target="_blank">麦片</a></li>
+                            <li><a href="" target="_blank">克奥妮斯</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="head-user-menu">
+                    <dl class="my-mall">
+                        <dt><span class="ico"></span>我的商城<i class="arrow"></i></dt>
+                        <dd>
+                            <div class="sub-title">
+                                <h4> </h4>
+                                <a href="" class="arrow" target="_blank">我的用户中心<i></i></a>
+                            </div>
+                            <div class="user-centent-menu">
+                                <ul>
+                                    <li><a href="" target="_blank">站内消息(<span>0</span>)</a></li>
+                                    <li><a href="" class="arrow" target="_blank">我的订单<i></i></a></li>
+                                    <li><a href="" target="_blank">咨询回复(<span id="member_consult">0</span>)</a></li>
+                                    <li><a href="" class="arrow" target="_blank">我的收藏<i></i></a></li>
+                                    <li><a href="" target="_blank">代金券(<span id="member_voucher">0</span>)</a></li>
+                                    <li><a href="" class="arrow" target="_blank">我的积分<i></i></a></li>
+                                </ul>
+                            </div>
+                            <div class="browse-history">
+                                <div class="part-title">
+                                    <h4>最近浏览的商品</h4>
+                                    <span style="float:right;"><a href="" target="_blank">全部浏览历史</a></span>
+                                </div>
+                                <ul>
+                                    <li class="no-goods"><img class="loading"
+                                            src="https://www.baiyangwang.com/templates/default/images/loading.gif" />
+                                    </li>
+                                </ul>
+                            </div>
+                        </dd>
+                    </dl>
+                    <dl class="my-cart">
+                        <dt><span class="ico"></span>购物车结算<i class="arrow"></i></dt>
+                        <dd>
+                            <div class="sub-title">
+                                <h4>最新加入的商品</h4>
+                            </div>
+                            <div class="incart-goods-box">
+                                <div class="incart-goods"> <img class="loading"
+                                        src="https://www.baiyangwang.com/templates/default/images/loading.gif" /> </div>
+                            </div>
+                            <div class="checkout"> <span class="total-price">共<i>0</i>种商品</span><a
+                                    href="https://www.baiyangwang.com/index.php?act=cart" class="btn-cart"
+                                    target="_blank">结算购物车中的商品</a> </div>
+                        </dd>
+                    </dl>
+                </div>
+            </header>
+        </div>
+        <nav class="public-nav-layout ">
+            <div class="wrapper">
+                <div class="all-category">
+                    <div class="title"><i></i>
+                        <h3><a>全部分类</a></h3>
+                    </div>
+                    <div class="category">
+                        <ul class="menu"></ul>
+                    </div>
+                </div>
+                <ul class="site-menu">
+                    <li><a href="http://127.0.0.1/demo/client/src/html/home.html" target="_blank">首页</a></li>
+                    <li><a href="" target="_blank">维矿物质</a></li>
+                    <li><a href="" target="_blank">营养补充</a></li>
+                    <li><a href="" target="_blank">中西药品</a>
+                    </li>
+                    <li><a href="http://127.0.0.1/demo/client/src/html/details.html" target="_blank">知名美妆</a>
+                    </li>
+                    <li><a href="" target="_blank">免疫调节</a>
+                    </li>
+                    <li><a href="" target="_blank">庄园级橄榄油</a></li>
+                    <li><a href="" target="_blank">有偿资讯</a></li>
+                </ul>
+
+        </nav>
+        <div class="nch-breadcrumb-layout">
+        </div>
+    </header>
+    <main class="nch-container wrapper">
+        <div id="ncToolbar" class="nc-appbar">
+            <div class="nc-appbar-tabs" id="appBarTabs">
+                <div class="ever">
+                    <div class="cart"><a href="javascript:void(0);" id="rtoolbar_cart"><span class="icon"></span> <span
+                                class="name">购物车</span><i id="rtoobar_cart_count" class="new_msg"
+                                style="display:none;"></i></a>
+                    </div>
+                    <div class="chat"><a href="javascript:void(0);" id="chat_show_user"><span class="icon"></span><i
+                                id="new_msg" class="new_msg" style="display:none;"></i><span
+                                class="tit kefu">在线联系</span></a></div>
+                </div>
+                <div class="variation">
+                    <div class="middle">
+                        <div class="user" nctype="a-barLoginBox">
+                            <a href="javascript:void(0);">
+                                <div class="avatar"><img
+                                        src="https://b2cstatic.baiyangwang.com/shop/common/05755058785008341.jpg">
+                                </div>
+                                <span class="tit">会员登录</span>
+                            </a>
+                        </div>
+                        <div class="user-login-box" nctype="barLoginBox" style="display: none;"> <i class="arrow"></i>
+                            <a href="javascript:void(0);" class="close-a" nctype="close-barLoginBox" title="关闭">X</a>
+                            <form id="login_form" method="post" action="index.php?act=login&amp;op=login"
+                                onsubmit="ajaxpost('login_form', '', '', 'onerror')">
+                                <input type="hidden" name="formhash" value="_LgXOsE83j2J_dAoxpAGYqA75LwAbSa"> <input
+                                    type="hidden" name="form_submit" value="ok">
+                                <input name="nchash" type="hidden" value="7323437a">
+                                <dl>
+                                    <dt><strong>登录名</strong></dt>
+                                    <dd>
+                                        <input type="text" class="text" autocomplete="off" name="user_name"
+                                            autofocus="">
+                                        <label></label>
+                                    </dd>
+                                </dl>
+                                <dl>
+                                    <dt><strong>登录密码</strong><a href="" target="_blank">忘记登录密码？</a></dt>
+                                    <dd>
+                                        <input type="password" class="text" name="password" autocomplete="off">
+                                        <label></label>
+                                    </dd>
+                                </dl>
+                                <div class="bottom">
+                                    <input type="submit" class="submit" value="确认">
+                                    <input type="hidden" value="" name="ref_url">
+                                    <a href="" target="_blank">注册新用户</a>
+                                </div>
+                            </form>
+                        </div>
+                        <div class="prech">&nbsp;</div>
+                        <div class="compare"><a href="javascript:void(0);" id="compare"><span class="icon"></span><span
+                                    class="tit">商品对比</span></a></div>
+                    </div>
+                    <div class="gotop"><a href="javascript:void(0);" id="gotop"><span class="icon"></span><span
+                                class="tit">返回顶部</span></a></div>
+                </div>
+                <div class="content-box" id="content-compare" style="right: -210px;">
+                    <div class="top">
+                        <h3>商品对比</h3>
+                        <a href="javascript:void(0);" class="close" title="隐藏"></a>
+                    </div>
+                    <div id="comparelist"></div>
+                </div>
+                <div class="content-box" id="content-cart" style="right: -210px;">
+                    <div class="top">
+                        <h3>我的购物车</h3>
+                        <a href="javascript:void(0);" class="close" title="隐藏"></a>
+                    </div>
+                    <div id="rtoolbar_cartlist">
+                        <ul class="cart-list" id="cart-list">
+                            <li>
+                                <dl>
+                                    <dd style="text-align: center; ">暂无商品</dd>
+                                </dl>
+                            </li>
+
+                        </ul>
+                        <div class="btn-box" id="btn-box-price">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="shop_con_list" id="main-nav-holder">
+            <nav class="sort-bar" id="main-nav">
+                <div class="nch-sortbar-array"> 排序方式：
+                    <ul class="nch-sortbar-array-index">
+                        <li class="selected" data-type="default">默认</li>
+                        <li data-type="asc">价格从低到高<i></i></li>
+                        <li data-type="dsc">价格从高到低<i></i></li>
+                    </ul>
+                </div>
+            </nav>
+            <div>
+                <div class="squares" nc_type="current_display_mode">
+                    <ul class="list_pic search_ul"></ul>
+                </div>
+            </div>
+            <div class="tc mt20 mb20">
+                <div id="sort" class="sort"></div>
+            </div>
+        </div>
+    </main>
+    <footer id="footer"></footer>
+    <script>
+        $(() => {
+            $("#footer").load("./footer.html");
+        })
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,81 @@
+<script src="../lib/jquery-3.4.1.js"></script>
+<script src="../lib/VII.Cart.js"></script>
+
+<div class="nc-appbar-tabs" id="appBarTabs">
+    <div class="ever">
+        <div class="cart"><a href="javascript:void(0);" id="rtoolbar_cart"><span class="icon"></span> <span
+                    class="name">购物车</span><i id="rtoobar_cart_count" class="new_msg" style="display:none;"></i></a>
+        </div>
+        <div class="chat"><a href="javascript:void(0);" id="chat_show_user"><span class="icon"></span><i id="new_msg"
+                    class="new_msg" style="display:none;"></i><span class="tit kefu">在线联系</span></a></div>
+    </div>
+    <div class="variation">
+        <div class="middle">
+            <div class="user" nctype="a-barLoginBox">
+                <a href="javascript:void(0);">
+                    <div class="avatar"><img src="https://b2cstatic.baiyangwang.com/shop/common/05755058785008341.jpg">
+                    </div>
+                    <span class="tit">会员登录</span>
+                </a>
+            </div>
+            <div class="user-login-box" nctype="barLoginBox" style="display: none;"> <i class="arrow"></i> <a
+                    href="javascript:void(0);" class="close-a" nctype="close-barLoginBox" title="关闭">X</a>
+                <form id="login_form" method="post" action="index.php?act=login&amp;op=login"
+                    onsubmit="ajaxpost('login_form', '', '', 'onerror')">
+                    <input type="hidden" name="formhash" value="_LgXOsE83j2J_dAoxpAGYqA75LwAbSa"> <input type="hidden"
+                        name="form_submit" value="ok">
+                    <input name="nchash" type="hidden" value="7323437a">
+                    <dl>
+                        <dt><strong>登录名</strong></dt>
+                        <dd>
+                            <input type="text" class="text" autocomplete="off" name="user_name" autofocus="">
+                            <label></label>
+                        </dd>
+                    </dl>
+                    <dl>
+                        <dt><strong>登录密码</strong><a href="" target="_blank">忘记登录密码？</a></dt>
+                        <dd>
+                            <input type="password" class="text" name="password" autocomplete="off">
+                            <label></label>
+                        </dd>
+                    </dl>
+                    <div class="bottom">
+                        <input type="submit" class="submit" value="确认">
+                        <input type="hidden" value="" name="ref_url">
+                        <a href="" target="_blank">注册新用户</a>
+                    </div>
+                </form>
+            </div>
+            <div class="prech">&nbsp;</div>
+            <div class="compare"><a href="javascript:void(0);" id="compare"><span class="icon"></span><span
+                        class="tit">商品对比</span></a></div>
+        </div>
+        <div class="gotop"><a href="javascript:void(0);" id="gotop"><span class="icon"></span><span
+                    class="tit">返回顶部</span></a></div>
+    </div>
+    <div class="content-box" id="content-compare" style="right: -210px;">
+        <div class="top">
+            <h3>商品对比</h3>
+            <a href="javascript:void(0);" class="close" title="隐藏"></a>
+        </div>
+        <div id="comparelist"></div>
+    </div>
+    <div class="content-box" id="content-cart" style="right: -210px;">
+        <div class="top">
+            <h3>我的购物车</h3>
+            <a href="javascript:void(0);" class="close" title="隐藏"></a>
+        </div>
+        <div id="rtoolbar_cartlist">
+            <ul class="cart-list">
+                <li>
+                    <dl>
+                        <dd style="text-align: center; ">暂无商品</dd>
+                    </dl>
+                </li>
+
+            </ul>
+            <div class="btn-box">
+            </div>
+        </div>
+    </div>
+</div>

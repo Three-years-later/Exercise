@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>百洋健康-登录</title>
+    <link rel="stylesheet" href="../css/base.css">
+    <link rel="stylesheet" href="../css/home_header.css">
+    <link rel="stylesheet" href="../css/home_login.css">
+    <script src="../lib/jquery-3.4.1.js"></script>
+    <script src="../lib/Cookie.js"></script>
+    <script src="../lib/captcha.js"></script>
+    <script src="../lib/md5.js"></script>
+    <script src="../lib/V.Login.js"></script>
+</head>
+
+<body>
+    <div class="header-wrap">
+        <header class="public-head-layout wrapper">
+            <h1 class="site-logo"><a href="http://127.0.0.1/demo/client/src/html/home.html"><img
+                        src="https://b2cstatic.baiyangwang.com/shop/common/logo.png" class="pngFix"></a></h1>
+            <div class="nc-regist-now">
+                <span class="avatar"><img
+                        src="https://b2cstatic.baiyangwang.com/shop/common/05755058785008341.jpg"></span>
+                <span>您好，欢迎来到百洋健康<br>已注册的会员请登录，或立即<a title=""
+                        href="http://127.0.0.1/demo/client/src/html/registered.html"
+                        class="register">注册新会员</a></span></div>
+        </header>
+    </div>
+    <div id="append_parent"></div>
+    <div id="ajaxwaitid"></div>
+    <div class="nc-login-layout">
+        <div class="left-pic"><img src="https://b2cstatic.baiyangwang.com/shop/login/4.jpg"></div>
+        <div class="nc-login">
+            <div class="arrow"></div>
+            <div class="nc-login-mode">
+                <ul class="tabs-nav">
+                    <li><a href="#default" class="tabulous_active">用户登录<i></i></a></li>
+                    <li><a href="#mobile" class="">手机动态码登录<i></i></a></li><span class="tabulousclear"></span>
+                </ul>
+                <div id="tabs_container" class="tabs-container transition" style="height: 267px;">
+                    <div id="default" class="tabs-content make_transist hideflip showflip"
+                        style="position: absolute; top: 0px;">
+                        <form id="login_form" class="nc-login-form" method="post"
+                            action="">
+                            <input type="hidden" name="formhash" value=""> <input
+                                type="hidden" name="form_submit" value="">
+                            <input name="nchash" type="hidden" value="">
+                            <dl>
+                                <dt>账&nbsp;&nbsp;&nbsp;号：</dt>
+                                <dd>
+                                    <input type="text" class="text" autocomplete="off" name="user_name"  id="user_name" placeholder="可使用已注册的用户名或手机号登录" style="color: rgb(187, 187, 187);">
+                                </dd>
+                            </dl>
+                            <dl>
+                                <dt>密&nbsp;&nbsp;&nbsp;码：</dt>
+                                <dd>
+                                    <input type="password" class="text" name="password" id="password" placeholder="6-20个大小写英文字母、符号或数字" style="color: rgb(187, 187, 187);">
+                                </dd>
+                            </dl>
+                           
+                            <div class="submit-div">
+                                <button id="submit" class="submit" >登&nbsp;&nbsp;&nbsp;录</button>
+
+                            </div>
+                        </form>
+                    </div>
+                    <div id="mobile" class="tabs-content hideflip make_transist" style="position: absolute; top: 0px;">
+                        <form id="post_form" method="post" class="nc-login-form"
+                            action="">
+                            <input type="hidden" name="formhash" value="R94WLuTPbCYLPwYrw1SYfvFYwwVe9U5"> <input
+                                type="hidden" name="form_submit" value="ok">
+                            <input name="nchash" type="hidden" value="7323437a">
+                            <dl>
+                                <dt>手机号：</dt>
+                                <dd>
+                                    <input name="phone" type="text" class="text" id="phone" tipmsg="可填写已注册的手机号接收短信"
+                                        autocomplete="off" value="可填写已注册的手机号接收短信" style="color: rgb(187, 187, 187);">
+                                </dd>
+                            </dl>
+                            <div class="code-div">
+                                <dl>
+                                    <dt>验证码：</dt>
+                                    <dd>
+                                        <input type="text" name="captcha" class="text w100" tipmsg="输入验证码"
+                                            id="image_captcha" size="10" value="输入验证码"
+                                            style="color: rgb(187, 187, 187);">
+
+                                    </dd>
+                                </dl>
+                                <span></span>
+                            </div>
+
+                            <div class="tiptext" id="sms_text">正确输入上方验证码后，点击<span> <a href="javascript:void(0);"
+                                        onclick="get_sms_captcha('2')"><i
+                                            class="icon-mobile-phone"></i>发送手机动态码</a></span>，查收短信将系统发送的“6位手机动态码”输入到下方验证后登录。
+                            </div>
+                            <dl>
+                                <dt>动态码：</dt>
+                                <dd>
+                                    <input type="text" name="sms_captcha" autocomplete="off" class="text"
+                                        tipmsg="输入6位手机动态码" id="sms_captcha" size="15" value="输入6位手机动态码"
+                                        style="color: rgb(187, 187, 187);">
+
+                                </dd>
+                            </dl>
+                            <div class="submit-div">
+                                <input type="submit" id="" class="submit" value="登&nbsp;&nbsp;&nbsp;录">
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+            <div class="nc-login-api" id="demo-form-site">
+            </div>
+        </div>
+        <div class="clear"></div>
+    </div>
+    <div id="cti">
+        <div class="wrapper">
+            <ul></ul>
+        </div>
+    </div>
+    <div id="footer" class="wrapper">
+        <p><a href="http://127.0.0.1/demo/client/src/html/home.html">首页</a>
+        </p>
+        版权所有 2007-2018 青岛百洋健康药房连锁有限公司 百洋健康 <a target="_blank" href="http://www.beian.miit.gov.cn/">鲁ICP备09091598号</a> <a
+            target="_blank"
+            href="https://b2cstatic.baiyangwang.com/shop/common/lADPDgQ9qcyZo-jNBlnNCIw_2188_1625.jpg">互联网药品信息服务资质证书编号
+            (鲁)-经营性-2017-0003</a> <a target="_blank"
+            href="https://shopncstaticimage.baiyangwang.com/ylqxxkz.jpg">医疗器械经营许可证</a> <a target="_blank"
+            href="https://shopncstaticimage.baiyangwang.com/ylqxba.jpg"> 二类医疗器械备案凭证</a><br>
+    </div>
+</body>
+
+</html>

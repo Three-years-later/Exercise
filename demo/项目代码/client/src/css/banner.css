@@ -1,0 +1,92 @@
+body {
+    width: 100%;
+}
+
+.box1 {
+    width: 100%;
+    margin: 0px auto;
+    position: relative;
+}
+
+.box2 {
+    width: 1458px;
+    height: 350px;
+    overflow: hidden;
+    position: relative;
+}
+
+.home-hero-main {
+    background: #dddddd;
+    width: 10000px;
+    height: 350px;
+    padding: 0;
+    margin: 0;
+    position: absolute;
+}
+
+.slider {
+    float: left;
+}
+
+.slider img {
+    display: block;
+    width: 1458px;
+    height: 350px;
+}
+
+.slider-control {
+    position: absolute;
+    width: 100%;
+    height: 100px;
+    /* line-height: 100px; */
+    top: 50%;
+    margin-top: -50px;
+    font-size: 60px;
+}
+
+.box1:hover p{
+    display: block;
+}
+.prev {
+    display: none;
+    width: 30px;
+    height: 50px;
+    background: url(../img/banner_prev.png) no-repeat;
+    position: absolute;
+    left: 220px;
+    top:25px;
+}
+
+.next {
+    display: none;
+    width: 30px;
+    height: 50px;
+    background:url(../img/banner_next.png) no-repeat;
+    position: absolute;
+    right:220px;
+    top:25px;
+}
+
+.slider-nav {
+    position: absolute;
+    right: 50%;
+    bottom: 0;
+    height: 30px;
+}
+
+.slider-nav-item {
+    background: #fff;
+    /* color: #fff; */
+    float: left;
+    border-radius: 50%;
+    margin: 0 5px;
+    text-align: center;
+    width: 8px;
+    height: 8px;
+    border:1px solid #000;
+    line-height: 30px;
+}
+
+.active {
+    background: #fff;
+}

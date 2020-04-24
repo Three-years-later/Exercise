@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>百洋健康-注册</title>
+    <link rel="stylesheet" href="../css/base.css">
+    <link rel="stylesheet" href="../css/home_header.css">
+    <link rel="stylesheet" href="../css/home_login.css">
+    <link rel="stylesheet" href="../css/style.css">
+    <script src="../lib/jquery-3.4.1.js"></script>
+    <script src="../lib/captcha.js"></script>
+    <script src="../lib/md5.js"></script>
+    <script src="../lib/V.Registered.js"></script>
+</head>
+
+<body>
+    <div class="header-wrap">
+        <header class="public-head-layout wrapper">
+            <h1 class="site-logo"><a href="http://127.0.0.1/demo/client/src/html/home.html"><img src="../img/logo.png"
+                        class="pngFix"></a></h1>
+            <div class="nc-login-now">我已经注册，现在就<a href="http://127.0.0.1/demo/client/src/html/login.html" title="" class="register">登录</a></div>
+        </header>
+    </div>
+    <div class="nc-register-bg">
+        <div class="nc-register-box">
+            <div class="nc-register-layout">
+                <div class="left">
+                    <ul class="tabs-nav">
+                        <li>
+                            <a href="#mobile" class="tabulous_active">新用户注册<i></i></a>
+                        </li>
+                        <span class="tabulousclear"></span>
+                    </ul>
+                    <div id="register" class="register-form  active">
+                        <div class="SmsValid">
+                            <div class="form-item username">
+                                <span class="label">用户名</span>
+                                <div class="content">
+                                    <input type="text" placeholder="请设置您的用户名(2~6位字母区分大小写)" id="usernameID">
+                                    <span class="form-group__message"></span>
+                                </div>
+                            </div>
+                            <div class="form-item phone"><span class="label">手机号码</span>
+                                <div class="content"><input type="text" name="phoneNum" placeholder="请输入您的手机号"
+                                        id="phoneID">
+                                    <span class="form-group__message"></span>
+                                </div>
+                            </div>
+                            <div class="form-item image-code"><span class="label">验证码</span>
+                                <div class="content">
+                                    <input type="text" maxlength="6" placeholder="请输入验证码" id="imageCode">
+                                    <span class="form-group__message"></span>
+                                    <div class="image-code-box">
+                                        <canvas width="160" height="45" id="captcha"></canvas>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="form-item passwordA"><span class="label">设置密码</span>
+                                <div class="content"><input type="password" maxlength="16"
+                                        placeholder="密码长度3-6字符（大小写字母和数字）" id="passwordA">
+                                    <span class="form-group__message"></span>
+                                </div>
+                            </div>
+                            <div class="form-item passwordB"><span class="label">确认密码</span>
+                                <div class="content"><input type="password" maxlength="16" placeholder="密码请保持一致"
+                                        id="passwordB">
+                                    <span class="form-group__message"></span>
+                                </div>
+                            </div>
+                            <div class="form-item"><span class="label"></span> <button class="button register-btn"
+                                    id="registerBtn">立即注册</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="right">
+                    <div class="reister-after">
+                        <h4>注册之后您可以</h4>
+                        <ol>
+                            <li class="ico01"><i></i>购买商品支付订单</li>
+                            <li class="ico02"><i></i>收藏商品关注店铺</li>
+                            <li class="ico03"><i></i>安全交易诚信无忧</li>
+                            <li class="ico04"><i></i>积分获取优惠购物</li>
+                            <li class="ico05"><i></i>会员等级享受特权</li>
+                            <li class="ico06"><i></i>评价晒单站外分享</li>
+                        </ol>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="cti">
+        <div class="wrapper">
+            <ul></ul>
+        </div>
+    </div>
+    <div id="footer" class="wrapper">
+        <p><a href="http://127.0.0.1/demo/client/src/html/home.html">首页</a>
+        </p>版权所有 2007-2018 青岛百洋健康药房连锁有限公司 百洋健康 <a target="_blank"
+            href="http://www.beian.miit.gov.cn/">鲁ICP备09091598号</a> <a target="_blank"
+            href="https://b2cstatic.baiyangwang.com/shop/common/lADPDgQ9qcyZo-jNBlnNCIw_2188_1625.jpg">互联网药品信息服务资质证书编号
+            (鲁)-经营性-2017-0003</a> <a target="_blank"
+            href="https://shopncstaticimage.baiyangwang.com/ylqxxkz.jpg">医疗器械经营许可证</a> <a target="_blank"
+            href="https://shopncstaticimage.baiyangwang.com/ylqxba.jpg"> 二类医疗器械备案凭证</a><br>
+    </div>
+</body>
+
+</html>

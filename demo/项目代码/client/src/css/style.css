@@ -1,0 +1,203 @@
+.nc-register-bg .register-form {
+    margin-top: 45px;
+}
+
+.nc-register-bg .register-form .form-item {
+    margin-top: 20px;
+    font-size: 0;
+    text-align: center;
+}
+
+.nc-register-bg .register-form .form-item .label {
+    display: inline-block;
+    line-height: 45px;
+    font-size: 12px;
+    width: 60px;
+    text-align: right;
+    vertical-align: top;
+}
+
+.nc-register-bg .register-form .form-item .content {
+    display: inline-block;
+    font-size: 12px;
+    margin-left: 10px;
+}
+
+.nc-register-bg .register-form .form-item .content input {
+    width: 350px;
+}
+
+.nc-register-bg .register-form .form-item .content input,
+.nc-register-bg .register-form .form-item .content select {
+    border: 1px solid #ddd;
+    height: 43px;
+    text-indent: 12px;
+}
+
+.nc-register-bg .form-group__message {
+    display: none;
+    color: #c33;
+    margin-left: 10px;
+}
+
+.nc-register-bg .register-form .form-item {
+    margin-top: 20px;
+    font-size: 0;
+    text-align: center;
+}
+
+.nc-register-bg .register-form .form-item.image-code .content {
+    font-size: 0;
+}
+
+.nc-register-bg .register-form .form-item.image-code .content input {
+    width: 190px;
+    font-size: 12px;
+}
+
+.nc-register-bg .register-form .form-item.image-code .content .image-code-box {
+    display: inline-block;
+    vertical-align: top;
+    font-size: 12px;
+    height: 45px;
+}
+
+
+
+.nc-register-bg .register-form .register-btn.button {
+    display: inline-block;
+    width: 350px;
+    height: 45px;
+    line-height: 45px;
+    font-size: 20px;
+    font-weight: 500;
+    background-color: #EF3C79;
+    cursor: pointer;
+    text-align: center;
+    color: #fff;
+    border-radius: 4px;
+    outline: none;
+    border: none;
+}
+
+.nc-register-bg .form-group-error .content .form-group__message {
+    position: absolute;
+    bottom: -20px;
+    left: 0px;
+    display: block;
+    text-align: left;
+}
+
+.nc-register-bg .form-group-error .content {
+    position: relative;
+}
+
+.form-group__message {
+    display: none;
+    color: #c33;
+    margin-left: 10px
+}
+
+.form-group-error .form-group__message {
+    display: inline-block;
+    font-size: 12px;
+    color: #c33
+}
+
+.form-group-error .btn:disabled,
+.form-group-error button:disabled {
+    background-color: #ccc !important;
+    cursor: not-allowed !important
+}
+
+.form-group-error input,
+.form-group-error input:focus,
+.form-group-error input:hover,
+.form-group-error textarea {
+    border-color: #c33 !important
+}
+
+canvas {
+    display: inline-block;
+    height: 53px;
+    /* margin-top:5px; */
+    width: 160px;
+}
+
+#login .article .login-form .login-main-content {
+    padding: 0 35px;
+}
+
+.loginView {
+    display: none;
+}
+
+#login .article .login-form .login-main-content .image-code,
+#login .article .login-form .login-main-content .phone,
+#login .article .login-form .login-main-content .phone-code {
+    margin-top: 20px;
+}
+
+#login .article .login-form .login-main-content .SmsValid .label {
+    display: none;
+}
+
+#login .article .login-form .login-main-content .image-code input,
+#login .article .login-form .login-main-content .phone-code input,
+#login .article .login-form .login-main-content .phone input {
+    text-indent: 12px;
+}
+
+#login .article .login-form .login-main-content input[type=password],
+#login .article .login-form .login-main-content input[type=text] {
+    width: 100%;
+    height: 45px;
+    border: 1px solid #ddd;
+    font-size: 14px;
+}
+
+.form-group__message {
+    display: none;
+    color: #c33;
+    margin-left: 10px;
+}
+
+.login-form .login-main-content .image-code,
+.login-form .login-main-content .phone-code {
+    font-size: 0;
+}
+
+.login-form .login-main-content .image-code input,
+.login-form .login-main-content .phone-code input {
+    width: calc(100% - 130px);
+}
+
+.login-form .login-main-content .image-code input,
+.login-form .login-main-content .phone-code input,
+.login-form .login-main-content .phone input {
+    text-indent: 12px;
+}
+
+.login-form .login-main-content input[type=password],
+.login-form .login-main-content input[type=text] {
+    width: 100%;
+    height: 45px;
+    border: 1px solid #ddd;
+    font-size: 14px;
+}
+
+.login-form .login-main-content .image-code .button.code-sms,
+.login-form .login-main-content .image-code .image-code-box,
+.login-form .login-main-content .phone-code .button.code-sms,
+.login-form .login-main-content .phone-code .image-code-box {
+    display: inline-block;
+    width: 128px;
+    height: 47px;
+    line-height: 47px;
+    font-size: 12px;
+    text-align: center;
+    color: #666;
+    cursor: pointer;
+    background-color: #ddd;
+    vertical-align: top;
+}

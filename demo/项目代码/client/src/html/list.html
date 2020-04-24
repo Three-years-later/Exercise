@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title></title>
+    <link rel="stylesheet" href="../css/base.css">
+    <link rel="stylesheet" href="../css/home_goods.css">
+    <link rel="stylesheet" href="../css/home_header.css">
+    <link rel="stylesheet" href="../css/index-min.css">
+    <link rel="stylesheet" href="../css/zoom.css">
+    <script src="../lib/jquery-3.4.1.js"></script>
+    <script src="../lib/Cookie.js"></script>
+    <script src="../lib/VI.List.js"></script>
+    <script src="../lib/III.Banner.js"></script>
+    <script src="../lib/IV.Floor.js"></script>
+
+</head>
+
+<body>
+    <header id="header"></header>
+    <main>
+        <div id="ncToolbar" class="nc-appbar"></div>
+        <div class="wrapper pr">
+            <input type="hidden" id="lockcompare" value="unlock">
+            <div class="ncs-detail ownshop">
+                <!-- S 商品图片 -->
+                <div class="preview fl" style="float: left;">
+                    <div id="vertical" class="bigImg">
+                        <img src="" width="360px" height="360px" nc-data-index="0" alt="" id="midimg"
+                            class="content-img" style="display:block;">
+                        <div id="winSelector" style="display: none;"></div>
+                    </div>
+                    <!--smallImg end-->
+                    <div id="bigView" style="display: none;">
+                        <img width="1280" height="1280" alt="" style="left: -654.222px; top: -817.778px;">
+                    </div>
+
+                </div>
+                <div id="goodcover"></div>
+                <!-- S 商品基本信息 -->
+                <div class="ncs-goods-summary">
+                    <div class="name">
+                        <h1></h1>
+                        <strong></strong>
+                    </div>
+                    <div class="ncs-meta">
+                        <!-- S 商品参考价格 -->
+                        <dl>
+                            <dt>
+                                <!--市&nbsp;场&nbsp;价：-->市场价</dt>
+                            <dd class="cost-price"><strong></strong></dd>
+                        </dl>
+                        <!-- E 商品参考价格 -->
+                        <!-- S 商品发布价格 -->
+                        <dl>
+                            <dt>
+                                <!--商&nbsp;城&nbsp;价：-->商城价</dt>
+                            <dd class="price">
+                                <strong></strong>
+                            </dd>
+                        </dl>
+                    </div>
+
+                    <!-- S 促销 -->
+                    <!-- E 促销 -->
+
+                    <div class="ncs-logistics">
+                        <!-- S 物流与运费新布局展示  -->
+                        <dl id="ncs-freight" class="ncs-freight">
+                            <dt style="width: 50px;">运&nbsp;费：</dt>
+                            <dd class="ncs-freight_box">
+
+                                <div id="ncs-freight-prompt">
+                                    HD直邮&nbsp;&nbsp;至&nbsp;&nbsp; </div>
+
+                                <div id="ncs-freight-selector" class="ncs-freight-select">
+
+                                    <div class="text">
+                                        <div>请选择地区</div>
+                                        <b>∨</b>
+                                    </div>
+                                    <div class="content">
+                                        <div id="ncs-stock" class="ncs-stock" data-widget="tabs">
+                                            <div class="mt">
+                                                <ul class="tab">
+                                                    <li data-index="0" data-widget="tab-item" class="curr"><a
+                                                            href="#none" class="hover"><em>请选择</em><i> ∨</i></a></li>
+                                                </ul>
+                                            </div>
+                                            <div id="stock_province_item" data-widget="tab-content" data-area="0">
+                                                <ul class="area-list">
+                                                </ul>
+                                            </div>
+                                            <div id="stock_city_item" data-widget="tab-content" data-area="1"
+                                                style="display: none;">
+                                                <ul class="area-list">
+                                                </ul>
+                                            </div>
+                                            <div id="stock_area_item" data-widget="tab-content" data-area="2"
+                                                style="display: none;">
+                                                <ul class="area-list">
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <a href="javascript:;" class="close"
+                                        onclick="$('#ncs-freight-selector').removeClass('hover')">关闭</a>
+                                </div>
+                                <div id="ncs-freight-prompt"> <strong>有货</strong>
+                                    免运费 </div>
+                            </dd>
+                        </dl>
+                        <!-- S 物流与运费新布局展示  -->
+                        <!-- S 门店自提 -->
+                        <!-- E 门店自提 -->
+                    </div>
+                    <div></div>
+
+                    <div class="ncs-logistics" style="width:150px;">
+                        <dl id="ncs-freight" class="ncs-freight">
+                            <dt style="width:50px;">税&nbsp;费：</dt>
+                            <dd style="width:80px;">
+                                <div>
+                                    免税
+                                </div>
+                            </dd>
+                        </dl>
+
+                        <div id="tax_rate" style="display: none;">
+                            <div style="left:112px;top:10px;width:490px;border: solid 0px #D7D7D7;"
+                                id="sale-rule-content1" class="sale-rule-content" nctype="rule-content">
+                                <div class="title"
+                                    style="border: solid 1px #D7D7D7;width:10px;height:12px;padding-bottom: 15px;"><a
+                                        href="javascript:;" nctype="hide-rule" style="float:left;">∧</a></div>
+                                <div class="content" style="padding: 5px 0 5px 5px;border: solid 1px #D7D7D7;">
+                                    <div class="mjs-tit">
+                                        税率为：9.1%
+                                    </div>
+                                    <div class="mjs-remark">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- 定义下宽度防止配送地址选择时占用空间 -->
+
+                    <script>
+                        $('#tax_rate_open').on('click', function () {
+                            $('#tax_rate').css('display', 'inline');
+                            $('#sale-rule-content1').css('display', 'inline');
+                        });
+                    </script>
+
+
+                    <div class="ncs-key">
+
+                        <!-- S 商品规格值-->
+                        <!-- E 商品规格值-->
+                    </div>
+                    <!-- S 购买数量及库存 -->
+                    <div class="ncs-buy">
+                        <div class="ncs-figure-input">
+                            <input type="text" name="" id="quantity" value="1" size="3" maxlength="6"
+                                class="input-text">
+                            <a href="javascript:void(0)" class="increase" nctype="increase">&nbsp;</a> <a
+                                href="javascript:void(0)" class="decrease" nctype="decrease">&nbsp;</a> </div>
+                        <div class="ncs-point" style="display: none;"><i></i>
+                            <!-- S 库存 -->
+                            <span>您选择的商品库存<strong nctype="goods_stock">50</strong>件</span>
+                            <!-- E 库存 -->
+                        </div>
+
+                        <!-- S 提示已选规格及库存不足无法购买 -->
+                        <!-- E 提示已选规格及库存不足无法购买 -->
+                        <!-- S 购买按钮 -->
+                        <div class="ncs-btn">
+                            <!-- 加入购物车-->
+                            <a href="javascript:void(0);" nctype="addcart_submit" class="addcart " title="加入购物车"><i
+                                    class="icon-shopping-cart"></i>
+                                加入购物车</a>
+                            <!-- 立即购买-->
+                            <a href="javascript:void(0);" nctype="buynow_submit" class="buynow " title="立即购买">立即购买</a>
+                            <!-- S 加入购物车弹出提示框 -->
+                            <div class="ncs-cart-popup">
+                                <dl>
+                                    <dt>成功添加到购物车<a title="关闭"
+                                            onclick="$('.ncs-cart-popup').css({'display':'none'});">X</a></dt>
+                                    <dd>购物车共有 <strong id="bold_num"></strong> 种商品 总金额为：<em id="bold_mly"
+                                            class="saleP"></em></dd>
+                                    <dd class="btns"><a href="javascript:void(0);" class="ncbtn-mini ncbtn-mint"
+                                            onclick="location.href='https://www.baiyangwang.com/index.php?act=cart'">查看购物车</a>
+                                        <a href="javascript:void(0);" class="ncbtn-mini" value=""
+                                            onclick="$('.ncs-cart-popup').css({'display':'none'});">继续购物</a></dd>
+                                </dl>
+                            </div>
+                            <!-- E 加入购物车弹出提示框 -->
+                        </div>
+                        <!-- E 购买按钮 -->
+                    </div>
+                </div>
+                <!-- E 商品图片及收藏分享 -->
+                <div class="clear"></div>
+            </div>
+            <!-- S 优惠套装 -->
+            <div class="ncs-promotion" id="nc-bundling" style="display:none;"></div>
+            <!-- E 优惠套装 -->
+            <div id="content" class="ncs-goods-layout expanded">
+                <div class="ncs-goods-main" id="main-nav-holder">
+                    <div class="tabbar pngFix" id="main-nav">
+                        <div class="ncs-goods-title-nav">
+                            <ul id="categorymenu">
+                                <li class="current"><a id="tabGoodsIntro" href="#content">商品详情</a></li>
+                                <li><a id="tabGoodsRate" href="#content">商品评价<em>(0)</em></a></li>
+                                <li><a id="tabGuestbook" href="#content">购买咨询</a></li>
+
+
+                                <div class="ncs-goodscode-box"><a class="ncs-goodscode-link">手机购买</a>
+                                    <div class="ncs-goods-code">
+                                        <img src="https://b2cstatic.baiyangwang.com/shop/store/2/877782468.png"
+                                            title="用商城手机客户端扫描二维码直达商品详情内容">
+                                        <span class="ncs-goods-code-note">客户端扫购有惊喜</span> </div>
+                                </div>
+                            </ul>
+
+
+
+                            <div class="switch-bar"><a href="javascript:void(0)" id="fold">&nbsp;</a></div>
+                        </div>
+                    </div>
+                    <div class="ncs-intro">
+                        <div class="content bd" id="ncGoodsIntro">
+                            <ul class="nc-goods-sort">
+                                <li>商家货号：877782468</li>
+                                <li>品牌：VERSACE 范思哲</li>
+                            </ul>
+                            <div class="ncs-goods-info-content goods_no_thumb">
+                                <div class="top-template">
+                                    <p style="text-align:center;">
+                                        <img src="https://b2cstatic.baiyangwang.com/shop/store/goods/2/2_05887678948217088_1280.jpg"
+                                            alt="【香港直邮】意大利Versace/范思哲粉红晶钻女士香水90ml" width="790"><img
+                                            src="https://b2cstatic.baiyangwang.com/shop/store/goods/2/2_05887679117426469_1280.jpg"
+                                            alt="【香港直邮】意大利Versace/范思哲粉红晶钻女士香水90ml" width="790"><img
+                                            src="https://shopncstaticimage.baiyangwang.com/shop/store/goods/2/2_06095832330168886.jpg"
+                                            alt="【香港直邮】意大利Versace/范思哲粉红晶钻女士香水90ml">
+                                    </p>
+                                    <div style="text-align:center;">
+                                        <img src="https://shopncstaticimage.baiyangwang.com/shop/store/goods/2/2_06323302041163532.jpg"
+                                            alt="【香港直邮】意大利Versace/范思哲粉红晶钻女士香水90ml">
+                                    </div>
+                                </div>
+                                <div class="default"><img
+                                        src="https://shopncstaticimage.baiyangwang.com/shop/store/goods/2/2_06327620125414235.jpg"
+                                        alt="【香港直邮】意大利Versace/范思哲粉红晶钻女士香水90ml"><img
+                                        src="https://shopncstaticimage.baiyangwang.com/shop/store/goods/2/2_06327620105475450.jpg"
+                                        alt="【香港直邮】意大利Versace/范思哲粉红晶钻女士香水90ml"><img
+                                        src="https://shopncstaticimage.baiyangwang.com/shop/store/goods/2/2_06327620112727169.jpg"
+                                        alt="【香港直邮】意大利Versace/范思哲粉红晶钻女士香水90ml"><img
+                                        src="https://shopncstaticimage.baiyangwang.com/shop/store/goods/2/2_06327620116379172.jpg"
+                                        alt="【香港直邮】意大利Versace/范思哲粉红晶钻女士香水90ml"><img
+                                        src="https://shopncstaticimage.baiyangwang.com/shop/store/goods/2/2_06327620118765954.jpg"
+                                        alt="【香港直邮】意大利Versace/范思哲粉红晶钻女士香水90ml"><img
+                                        src="https://shopncstaticimage.baiyangwang.com/shop/store/goods/2/2_06327620118365085.jpg"
+                                        alt="【香港直邮】意大利Versace/范思哲粉红晶钻女士香水90ml"><img
+                                        src="https://shopncstaticimage.baiyangwang.com/shop/store/goods/2/2_06327620119393894.jpg"
+                                        alt="【香港直邮】意大利Versace/范思哲粉红晶钻女士香水90ml"><img
+                                        src="https://shopncstaticimage.baiyangwang.com/shop/store/goods/2/2_06327620121707155.jpg"
+                                        alt="【香港直邮】意大利Versace/范思哲粉红晶钻女士香水90ml"><img
+                                        src="https://shopncstaticimage.baiyangwang.com/shop/store/goods/2/2_06327620120812201.jpg"
+                                        alt="【香港直邮】意大利Versace/范思哲粉红晶钻女士香水90ml"><img
+                                        src="https://shopncstaticimage.baiyangwang.com/shop/store/goods/2/2_06327620121519188.jpg"
+                                        alt="【香港直邮】意大利Versace/范思哲粉红晶钻女士香水90ml"></div>
+                                <div class="bottom-template">
+                                    <div style="text-align:center;">
+                                    </div>
+                                    <p style="text-align:center;">
+                                        <img src="https://shopncstaticimage.baiyangwang.com/shop/store/goods/2/2_06097805048223828.jpg"
+                                            alt="【香港直邮】意大利Versace/范思哲粉红晶钻女士香水90ml"><img
+                                            src="https://shopncstaticimage.baiyangwang.com/shop/store/goods/2/2_06134753524877350.jpg"
+                                            alt="【香港直邮】意大利Versace/范思哲粉红晶钻女士香水90ml">
+                                    </p>
+                                    <img src="https://shopncstaticimage.baiyangwang.com/shop/store/goods/2/2_06325898630272748.jpg"
+                                        alt="【香港直邮】意大利Versace/范思哲粉红晶钻女士香水90ml">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+                <div class="ncs-sidebar">
+                </div>
+            </div>
+    </main>
+    <footer id="footer">
+    </footer>
+    <script>
+        $(() => {
+            $("#ncToolbar").load("./shoppingCart.html");
+            $("#header").load("./header.html");
+            $("#footer").load("./footer.html");
+            $.getJSON("../../../server/carousel.json", (data) => new Banner(data).init());
+            $.getJSON("../../../server/carousel.json", (data) => new Floor(data).init());
+        })
+    </script>
+</body>
+
+</html>
